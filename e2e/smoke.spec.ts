@@ -28,6 +28,16 @@ test('all-in runs to showdown', async ({ page }) => {
   await page.getByRole('button', { name: 'All-in' }).click();
   await expect(page.getByText(/ชนะด้วย/)).toBeVisible();
   await expect(page.getByRole('button', { name: 'เล่นมือใหม่' })).toBeVisible();
+
+  const table = await page.locator('.sim-table').boundingBox();
+  const board = await page.locator('.sim-board').boundingBox();
+  const topPlayer = await page.locator('.sim-0').boundingBox();
+  expect(table).not.toBeNull();
+  expect(board).not.toBeNull();
+  expect(topPlayer).not.toBeNull();
+  expect(Math.abs((board!.x + board!.width / 2) - (table!.x + table!.width / 2))).toBeLessThan(2);
+  expect(Math.abs((board!.y + board!.height / 2) - (table!.y + table!.height / 2))).toBeLessThan(2);
+  expect(topPlayer!.y + topPlayer!.height).toBeLessThan(board!.y);
 });
 
 test('side pots update from real commitments', async ({ page }) => {
