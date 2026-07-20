@@ -1,0 +1,15 @@
+---
+title: ลำดับการพูด
+description: จุดเริ่ม action ที่เปลี่ยนระหว่าง pre-flop และ post-flop
+---
+import PlayOrderStepper from '../../../components/interactive/PlayOrderStepper';
+
+Pre-flop มี blind อยู่แล้ว จึงเริ่มที่ผู้เล่นซ้ายมือ BB หรือ **UTG** แล้ววนตามเข็มจน BB ได้โอกาสตอบ หลังเปิด flop เป็นต้นไป action เริ่มที่ผู้เล่นคนแรกที่ยังอยู่ซ้ายมือของ BTN
+
+<PlayOrderStepper client:load />
+
+รอบเดิมพันจบเมื่อผู้เล่นที่ยังไม่ fold ทุกคนลงเงินเท่ากันหรือ all-in และไม่มี raise ที่ยังไม่ได้รับคำตอบ
+
+## จุดที่คนมักเข้าใจผิด
+
+> Big Blind ไม่ได้ปิด action โดยอัตโนมัติ หากมีคน raise ก่อนถึง BB การตัดสินใจยังต้องวนกลับมาตอบ raise นั้น

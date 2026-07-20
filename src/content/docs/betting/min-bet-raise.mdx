@@ -1,0 +1,17 @@
+---
+title: เดิมพันและเรสขั้นต่ำ
+description: คำนวณ minimum bet และ minimum raise ใน No-limit Hold’em
+---
+import BettingPlayground from '../../../components/interactive/BettingPlayground';
+
+ใน No-limit ยอด bet แรกขั้นต่ำเท่ากับ Big Blind ส่วน minimum raise ต้องเพิ่มอย่างน้อยเท่า **ขนาด bet หรือ raise เต็มครั้งล่าสุด**
+
+ตัวอย่าง: A bet 20 แล้ว B raise **เป็น 60** ขนาด raise คือ 40 ผู้เล่นถัดไปจึงต้อง raise อย่างน้อยอีก 40 หรือประกาศยอดรวมเป็น 100
+
+<BettingPlayground client:load />
+
+All-in ที่เพิ่มไม่ถึง minimum raise ยังเป็นยอดที่ต้อง call แต่โดยทั่วไปไม่เปิดสิทธิ์ re-raise ให้ผู้เล่นที่ action ไปแล้ว กติกาห้องอาจมีรายละเอียดเรื่องหลาย short all-in เพิ่มเติม
+
+## จุดที่คนมักเข้าใจผิด
+
+> “Raise 40” อาจกำกวมว่าเพิ่ม 40 หรือเป็นยอดรวม 40 ควรพูด “raise **to** 60” และ minimum raise ไม่เท่ากับขนาด pot

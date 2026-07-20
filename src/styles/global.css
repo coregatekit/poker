@@ -1,0 +1,47 @@
+@import '../components/core/core.css';
+@import '../components/interactive/interactive.css';
+
+body { background: var(--paper); color: var(--ink); }
+.site-title { color: var(--ink); font-weight: 800; }
+.sl-markdown-content h1, .sl-markdown-content h2 { letter-spacing: -.025em; }
+.sl-markdown-content h2 { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.sl-markdown-content a { text-underline-offset: .2em; }
+
+.poker-lab {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  margin-block: 1.5rem;
+  overflow: hidden;
+}
+.lab-head { padding: 1rem 1.15rem; border-bottom: 1px solid var(--line); }
+.lab-head h3 { font-size: 1rem; margin: 0; }
+.lab-head p { color: var(--ink-soft); font-size: .85rem; margin: .2rem 0 0; }
+.lab-body { padding: 1rem; }
+.lab-controls { align-items: center; display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+.lab-button {
+  background: var(--action); border: 0; border-radius: 999px; color: white; cursor: pointer;
+  font: inherit; font-weight: 700; padding: .55rem 1rem;
+}
+.lab-button.secondary { background: transparent; border: 1px solid var(--line); color: var(--ink); }
+.lab-button:disabled { cursor: not-allowed; opacity: .48; }
+.lab-button:focus-visible, .lab-input:focus-visible, .rank-choice:focus-visible {
+  outline: 3px solid var(--brass); outline-offset: 3px;
+}
+.lab-input { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--ink); font: inherit; padding: .5rem .65rem; width: 6rem; }
+.status-good { color: var(--success); font-weight: 750; }
+.status-bad { color: var(--danger); font-weight: 750; }
+.card-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+.table-felt { background: var(--felt); border: .55rem solid var(--felt-dark); border-radius: 48%; box-shadow: inset 0 0 0 2px rgb(255 255 255 / .13); min-height: 16rem; position: relative; }
+.visually-hidden { clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+
+@media (max-width: 420px) {
+  .lab-body { padding: .75rem; }
+  .lab-controls { align-items: stretch; flex-direction: column; }
+  .lab-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

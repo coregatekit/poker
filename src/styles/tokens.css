@@ -1,0 +1,49 @@
+@import '@fontsource-variable/noto-sans-thai';
+
+:root {
+  --paper: #f1ece1;
+  --paper-raised: #fbf8f1;
+  --felt: #75876f;
+  --felt-dark: #4c5e4b;
+  --ink: #3b372f;
+  --ink-soft: #686158;
+  --brass: #c1953c;
+  --action: #4c6b5b;
+  --danger: #a34f43;
+  --success: #427052;
+  --line: #d8cfbd;
+  --radius-sm: .55rem;
+  --radius-md: 1rem;
+  --shadow: 0 12px 34px rgb(59 55 47 / .12);
+  --sl-font: 'Noto Sans Thai Variable', system-ui, sans-serif;
+  --sl-color-accent-low: #dce5dc;
+  --sl-color-accent: var(--action);
+  --sl-color-accent-high: #263c31;
+  --sl-color-white: var(--ink);
+  --sl-color-gray-1: #504a41;
+  --sl-color-gray-2: #696158;
+  --sl-color-gray-3: #8b8275;
+  --sl-color-gray-4: #bbb09f;
+  --sl-color-gray-5: #d8cfbd;
+  --sl-color-gray-6: #e9e3d8;
+  --sl-color-black: var(--paper);
+}
+
+:root[data-theme='dark'] {
+  --paper: #252722;
+  --paper-raised: #30332c;
+  --ink: #eee8dc;
+  --ink-soft: #c4bcad;
+  --line: #4d5045;
+  --sl-color-accent-low: #31443a;
+  --sl-color-accent: #9caf9c;
+  --sl-color-accent-high: #e2eadf;
+  --sl-color-white: var(--ink);
+  --sl-color-gray-1: #e2ddcf;
+  --sl-color-gray-2: #ccc5b8;
+  --sl-color-gray-3: #aaa294;
+  --sl-color-gray-4: #79796e;
+  --sl-color-gray-5: #4d5045;
+  --sl-color-gray-6: #35372f;
+  --sl-color-black: var(--paper);
+}

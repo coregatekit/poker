@@ -141,3 +141,10 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Astro and test artifacts
+.astro/
+playwright-report/
+test-results/
+
+.DS_Store
